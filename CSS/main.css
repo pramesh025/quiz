@@ -1,0 +1,81 @@
+/*-------------------------------------------------------------------------------------------------------
+-                                       login                                                           -
+-------------------------------------------------------------------------------------------------------*/
+.log_in {
+  height: 100vh;
+  background-color: rgba(16, 122, 58, 0.78);
+  color: white;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.log_in h1 {
+  font-family: norwester;
+  font-size: 7em;
+  margin-bottom: 60px;
+}
+
+.log_in .username {
+  height: 3em;
+  width: 25em;
+  border-radius: 2em;
+  display: block;
+  border: 0;
+}
+
+.log_in input[type=text],
+.log_in input[type=password] {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.log_in input:focus,
+.log_in button:focus {
+  outline-width: 0;
+}
+
+.log_in .login_button {
+  height: 2.5em;
+  width: 10em;
+  display: block;
+  margin-top: 60px;
+  margin-left: 20em;
+  cursor: pointer;
+  background-color: #FFE77A;
+  color: black;
+  font-weight: 600;
+  border: 0;
+  border-radius: 2em;
+}
+
+.side_info {
+  position: absolute;
+  height: 200vh;
+  width: 40em;
+  background-color: white;
+  right: 30px;
+  top: -25em;
+  -webkit-transform: rotate(-11deg);
+          transform: rotate(-11deg);
+}
+
+.side_info .navbar-nav {
+  line-height: 40px;
+  -webkit-transform: rotate(11deg);
+          transform: rotate(11deg);
+  position: relative;
+  top: 25em;
+}
+
+.side_info .nav-item {
+  font-weight: 700;
+  font-size: 10pt;
+  margin-right: 4em;
+}
+
+.side_info .navbar-nav.navbar-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+/*# sourceMappingURL=main.css.map */
