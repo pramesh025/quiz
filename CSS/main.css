@@ -5,7 +5,7 @@
   height: 100vh;
   background-color: rgba(16, 122, 58, 0.78);
   color: white;
-  padding: 50px;
+  padding: 80px;
   position: relative;
   overflow: hidden;
 }
@@ -54,13 +54,13 @@
   height: 200vh;
   width: 40em;
   background-color: white;
-  right: 30px;
+  right: 3em;
   top: -25em;
   -webkit-transform: rotate(-11deg);
           transform: rotate(-11deg);
 }
 
-.side_info .navbar-nav {
+.navbar-nav {
   line-height: 40px;
   -webkit-transform: rotate(11deg);
           transform: rotate(11deg);
@@ -68,14 +68,131 @@
   top: 25em;
 }
 
-.side_info .nav-item {
+.nav-item {
   font-weight: 700;
   font-size: 10pt;
   margin-right: 4em;
 }
 
-.side_info .navbar-nav.navbar-center {
+.navbar-nav.navbar-center {
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (max-width: 1080px) {
+  .side_info {
+    top: 0;
+    height: 60px;
+    width: auto;
+    background-color: white;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    left: 0;
+    right: 0;
+  }
+  #nav_bar {
+    padding: 0 !important;
+  }
+  .navbar-nav {
+    top: 0;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  .nav-link {
+    color: #107A3A !important;
+  }
+}
+
+/*-------------------------------------------------------------------------------------------------------
+-                                       login                                                           -
+-------------------------------------------------------------------------------------------------------*/
+.quiz_interface {
+  min-height: 100vh;
+  background-color: #F6F6F6;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.logout {
+  text-decoration: underline;
+  color: #003687;
+  cursor: pointer;
+}
+
+.question p {
+  font-size: 1.2em;
+  margin-left: 15%;
+  margin-right: 15%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.options {
+  width: 80%;
+  margin-top: 3em;
+}
+
+.options .option {
+  border-radius: 2em;
+  height: 3.5em;
+  padding-left: 1.75em;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  text-transform: capitalize;
+  background-color: whitesmoke;
+  -webkit-box-shadow: #707070 1px 2px 3px;
+          box-shadow: #707070 1px 2px 3px;
+  font-family: 'Segoe UI', sans-serif;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.options .hover {
+  background-color: #ececec;
+  -webkit-box-shadow: #707070 2px 2px 4px;
+          box-shadow: #707070 2px 2px 4px;
+}
+
+.options .correct {
+  border: none;
+  background-color: #107A3A;
+  color: white;
+  -webkit-box-shadow: #4f1010 1px 2px 3px;
+          box-shadow: #4f1010 1px 2px 3px;
+}
+
+.options .wrong {
+  border: none;
+  background-color: #CF2929;
+  color: white;
+  -webkit-box-shadow: #4f1010 1px 2px 3px;
+          box-shadow: #4f1010 1px 2px 3px;
+}
+
+.options .selected {
+  border: none;
+  background-color: #D4C605;
+  color: white;
+  -webkit-box-shadow: #4f1010 1px 2px 3px;
+          box-shadow: #4f1010 1px 2px 3px;
+}
+
+#error_msg {
+  margin-top: 5px;
+  color: #CF2929;
+}
+
+#submit {
+  width: 10em;
+  border: none;
+  padding: 1em;
+  border-radius: 2em;
+  background-color: #707070;
+  color: white;
+  margin-right: 10%;
+  margin-bottom: 10%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="Bootstrap\css\bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="Font/norwester.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
     <title>Quiz</title>
 </head>
 
@@ -35,14 +36,47 @@
             </nav>
         </div>
     </div>
+    <div class="quiz_interface container-fluid">
+        <div class="row">
+            <p class="w-100 text-right mr-5 mt-3"> Hello Username! <span class="logout">Logout</span></p>
+        </div>
+        <div class="question row">
+            <p class="mt-5 text-center">6. <span class="ml-3">Here we ask some question about something or someone or someplace or somebody and the user will have to answer it from the following options.</span></p>
+        </div>
+        <div class="options row mx-auto">
+            <div id="op1" class="option col-md-5 correct">a. correct</div>
+            <div id="op2" class="option col-md-5">b. wrong</div>
+            <div id="op3" class="option col-md-5 wrong">c. wrong</div>
+            <div id="op4" class="option col-md-5">d. wrong</div>
+        </div>
+        <div class="row">
+            <p id="error_msg" class="w-100 text-center">Please choose an option!!</p>
+        </div>
+        <div class="row justify-content-end">
+            <button id="submit" type="submit">Submit</button>
+        </div>
+    </div>
+    <div id="congratz">
+
+    </div>
 
 
+
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Custom javascript -->
+    <script src="JS/main.js"></script>
 
     <!-- Optional JavaScript -->
+    <script type="text/javascript" src="Bootstrap/js/jquery.min.js"></script>
+    <script type="text/javascript" src="Bootstrap/js/popper.js"></script>
+    <script type="text/javascript" src="Bootstrap/js/bootstrap.min.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> -->
 </body>
 
 </html>

@@ -1,0 +1,81 @@
+.quiz_interface {
+    min-height: 100vh;
+    background-color: $light_white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.logout {
+    text-decoration: underline;
+    color: #003687;
+    cursor: pointer;
+}
+
+.question {
+    p {
+        font-size: 1.2em;
+        margin-left: 15%;
+        margin-right: 15%;
+        font-family: 'Segoe UI', sans-serif;
+    }
+}
+
+.options {
+    width: 80%;
+    margin-top: 3em;
+    .option {
+        border-radius: 2em;
+        height: 3.5em;
+        padding-left: 1.75em;
+        margin-right: 2em;
+        margin-bottom: 1em;
+        text-transform: capitalize;
+        background-color: darken($color: $light_white, $amount: 0.5%);
+        box-shadow: $light_black 1px 2px 3px;
+        font-family: 'Segoe UI', sans-serif;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+    }
+    .hover {
+        background-color: darken($color: $light_white, $amount: 4%);
+        box-shadow: $light_black 2px 2px 4px;
+    }
+    .correct {
+        border: none;
+        background-color: $green;
+        color: white;
+        box-shadow: darken($color: $red, $amount: 30%) 1px 2px 3px;
+    }
+    .wrong {
+        border: none;
+        background-color: $red;
+        color: white;
+        box-shadow: darken($color: $red, $amount: 30%) 1px 2px 3px;
+    }
+    .selected {
+        border: none;
+        background-color: $selected;
+        color: white;
+        box-shadow: darken($color: $red, $amount: 30%) 1px 2px 3px;
+    }
+}
+
+#error_msg {
+    margin-top: 5px;
+    color: $red;
+}
+
+#submit {
+    width: 10em;
+    border: none;
+    padding: 1em;
+    border-radius: 2em;
+    background-color: $light_black;
+    color: white;
+    margin-right: 10%;
+    margin-bottom: 10%;
+}
+
+.quiz_interface {
+    // display: none;
+}
