@@ -118,10 +118,75 @@
   cursor: pointer;
 }
 
-.question p {
+.step_progress {
+  margin-top: 60px;
+  overflow: hidden;
+  counter-reset: step;
+}
+
+.step_progress li {
+  list-style-type: none;
+  float: left;
+  width: 10%;
+  position: relative;
+}
+
+.step_progress li:before {
+  content: counter(step);
+  counter-increment: step;
+  width: 2em;
+  line-height: 2em;
+  display: block;
+  position: relative;
   font-size: 1.2em;
-  margin-left: 15%;
-  margin-right: 15%;
+  text-align: center;
+  color: #707070;
+  background: white;
+  border-radius: 50%;
+  border: 1px solid #707070;
+  margin: 0 auto 5px auto;
+  z-index: 2;
+}
+
+.step_progress li:after {
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #707070;
+  position: absolute;
+  left: 50%;
+  top: 1em;
+  z-index: 1;
+}
+
+.step_progress li:last-child:after {
+  content: none;
+}
+
+.step_progress li.active:before {
+  background: #D4C605;
+  color: white;
+  border: none;
+}
+
+.step_progress li.right:before,
+.step_progress li.right:after {
+  background: #107A3A;
+  color: white;
+  border: none;
+}
+
+.step_progress li.wrong:before,
+.step_progress li.wrong:after {
+  background: #CF2929;
+  color: white;
+  border: none;
+}
+
+.question p {
+  margin-top: 3em;
+  text-align: center;
+  font-size: 1.1em;
   font-family: 'Segoe UI', sans-serif;
 }
 
@@ -152,16 +217,16 @@
 
 .options .hover {
   background-color: #ececec;
-  -webkit-box-shadow: #707070 2px 2px 4px;
-          box-shadow: #707070 2px 2px 4px;
+  -webkit-box-shadow: #707070 5px 5px 5px;
+          box-shadow: #707070 5px 5px 5px;
 }
 
 .options .correct {
   border: none;
   background-color: #107A3A;
   color: white;
-  -webkit-box-shadow: #4f1010 1px 2px 3px;
-          box-shadow: #4f1010 1px 2px 3px;
+  -webkit-box-shadow: black 1px 2px 3px;
+          box-shadow: black 1px 2px 3px;
 }
 
 .options .wrong {
@@ -176,8 +241,8 @@
   border: none;
   background-color: #D4C605;
   color: white;
-  -webkit-box-shadow: #4f1010 1px 2px 3px;
-          box-shadow: #4f1010 1px 2px 3px;
+  -webkit-box-shadow: black 1px 2px 3px;
+          box-shadow: black 1px 2px 3px;
 }
 
 #error_msg {
@@ -193,6 +258,61 @@
   background-color: #707070;
   color: white;
   margin-right: 10%;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
+}
+
+#submit:focus {
+  outline: 0;
+}
+
+#submit:hover {
+  background-color: #575757;
+  -webkit-box-shadow: #6d6d6d 1px 2px 3px;
+          box-shadow: #6d6d6d 1px 2px 3px;
+}
+
+/*-------------------------------------------------------------------------------------------------------
+-                                       congratz                                                           -
+-------------------------------------------------------------------------------------------------------*/
+#congratz {
+  min-height: 100vh;
+  background-color: #F6F6F6;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+#congratz > * {
+  padding-top: 10%;
+  place-content: center;
+}
+
+.heading h1 {
+  font-size: 4em;
+}
+
+.heading h5 {
+  margin-top: 5%;
+  cursor: pointer;
+}
+
+.heading #retake {
+  color: #107A3A;
+}
+
+.heading #exit {
+  color: #CF2929;
+}
+
+.score {
+  background-color: white;
+  border: 1px solid #707070;
+  text-align: center;
+}
+
+.score h1 {
+  font-size: 8em;
+}
+
+#congratz {
+  display: none;
 }
 /*# sourceMappingURL=main.css.map */

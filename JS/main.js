@@ -1,10 +1,14 @@
 $(document).ready(() => {
     let username = '';
+    $('.username').focus();
     $('.username').on('keyup', () => {
         username = $('.username').val();
     })
 
-    function submit() {
+    let Qno;
+    let isSelected = '';
+
+    function takeQuiz() {
         if (username === '') {
             alert('Please enter a Username');
         } else {
@@ -12,12 +16,19 @@ $(document).ready(() => {
             $('.quiz_interface').removeClass('d-none');
 
             $('#name').html('Hello ' + username + '! ');
+
+            //initializing questions
+            $('#qn1').addClass('active');
+            Qno = 1
+            $('#qno').html(Qno + '.');
+            $('#ques').html('Here we ask some question about something or someone or someplace or somebody and the user will have to answer it from the following options.')
+
         }
     }
-    $('.login_button').on('click', submit)
+    $('.login_button').on('click', takeQuiz)
     $('.username').keyup((event) => {
         if (event.keyCode === 13)
-            submit();
+            takeQuiz();
     })
     $('.logout').on('click', () => {
         $('.log_in').removeClass('d-none');
@@ -33,5 +44,19 @@ $(document).ready(() => {
     }).on('click', (event) => {
         $('.options').children().removeClass('selected');
         $(event.currentTarget).addClass('selected');
+        isSelected = $(event.currentTarget).attr("id");
+        alert(isSelected);
     });
+
+
+
+
+    function nextQuestion() {
+        if (isSelected === '') {
+            $('#error_msg').removeClass('d-none');
+        }
+
+    }
+    $('#submit').on('click', nextQuestion);
+
 });

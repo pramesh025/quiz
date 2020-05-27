@@ -10,11 +10,71 @@
     cursor: pointer;
 }
 
+// step progress bar
+.step_progress {
+    margin-top: 60px;
+    overflow: hidden;
+    counter-reset: step;
+    li {
+        list-style-type: none;
+        float: left;
+        width: 10%;
+        position: relative;
+    }
+    li:before {
+        content: counter(step);
+        counter-increment: step;
+        width: 2em;
+        line-height: 2em;
+        display: block;
+        position: relative;
+        font-size: 1.2em;
+        text-align: center;
+        color: $light_black;
+        background: white;
+        border-radius: 50%;
+        border: 1px solid $light_black;
+        margin: 0 auto 5px auto;
+        z-index: 2;
+    }
+    li:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: $light_black;
+        position: absolute;
+        left: 50%;
+        top: 1em;
+        z-index: 1;
+    }
+    li:last-child:after {
+        content: none;
+    }
+    li.active:before {
+        background: $selected;
+        color: white;
+        border: none;
+    }
+    li.right:before,
+    li.right:after {
+        background: $green;
+        color: white;
+        border: none;
+    }
+    li.wrong:before,
+    li.wrong:after {
+        background: $red;
+        color: white;
+        border: none;
+    }
+}
+
+// </step progress bar
 .question {
     p {
-        font-size: 1.2em;
-        margin-left: 15%;
-        margin-right: 15%;
+        margin-top: 3em;
+        text-align: center;
+        font-size: 1.1em;
         font-family: 'Segoe UI', sans-serif;
     }
 }
@@ -38,13 +98,13 @@
     }
     .hover {
         background-color: darken($color: $light_white, $amount: 4%);
-        box-shadow: $light_black 2px 2px 4px;
+        box-shadow: $light_black 5px 5px 5px;
     }
     .correct {
         border: none;
         background-color: $green;
         color: white;
-        box-shadow: darken($color: $red, $amount: 30%) 1px 2px 3px;
+        box-shadow: darken($color: $green, $amount: 30%) 1px 2px 3px;
     }
     .wrong {
         border: none;
@@ -56,7 +116,7 @@
         border: none;
         background-color: $selected;
         color: white;
-        box-shadow: darken($color: $red, $amount: 30%) 1px 2px 3px;
+        box-shadow: darken($color: $yellow, $amount: 90%) 1px 2px 3px;
     }
 }
 
@@ -73,7 +133,14 @@
     background-color: $light_black;
     color: white;
     margin-right: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
+    &:focus {
+        outline: 0;
+    }
+    &:hover {
+        background-color: darken($color: $light_black, $amount: 10%);
+        box-shadow: darken($color: $light_black, $amount: 1%) 1px 2px 3px;
+    }
 }
 
 // .quiz_interface {

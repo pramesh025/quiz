@@ -39,9 +39,24 @@
     <div class="quiz_interface d-none container-fluid">
         <div class="row d-inline float-right mt-2">
             <span id="name" class="w-100 text-right mt-3 text-right"> </span><span class='logout mr-3'> Logout </span>
-        </div><br>
-        <div class="question row mr-0">
-            <p class="mt-5 text-center">6. <span class="ml-3">Here we ask some question about something or someone or someplace or somebody and the user will have to answer it from the following options.</span></p>
+        </div>
+        <br>
+        <ul class="step_progress">
+            <li id="qn1"></li>
+            <li id="qn2"></li>
+            <li id="qn3"></li>
+            <li id="qn4"></li>
+            <li id="qn5"></li>
+            <li id="qn6"></li>
+            <li id="qn7"></li>
+            <li id="qn8"></li>
+            <li id="qn9"></li>
+            <li id="qn10"></li>
+        </ul>
+        <div class="question d-inline">
+            <p> <span id="qno">6.</span>
+                <span id="ques"></span>
+            </p>
         </div>
         <div class="options row mx-auto">
             <div id="op1" class="option col-md-5 correct">a. correct</div>
@@ -50,14 +65,25 @@
             <div id="op4" class="option col-md-5">d. wrong</div>
         </div>
         <div class="row">
-            <p id="error_msg" class="w-100 text-center">Please choose an option!!</p>
+            <p id="error_msg" class="w-100 d-none text-center">Please choose an option!!</p>
         </div>
         <div class="row justify-content-end">
             <button id="submit" type="submit">Submit</button>
         </div>
     </div>
-    <div id="congratz">
-
+    <div id="congratz" class="container-fluid">
+        <div class="row w-100">
+            <div class="heading col-lg-6 my-auto">
+                <h1>Congratulation</h1>
+                <h1 id="c_username">Username!!!</h1>
+                <h5 id="retake">Want to take it again?</h5>
+                <h5 id="exit">Or do you want to call it a day?</h5>
+            </div>
+            <div class="score jumbotron col-lg-4">
+                <h3>Your score</h3>
+                <h1 id="final_score">60%</h1>
+            </div>
+        </div>
     </div>
 
 

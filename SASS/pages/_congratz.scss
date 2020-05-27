@@ -1,0 +1,38 @@
+#congratz {
+    min-height: 100vh;
+    background-color: $light_white;
+    font-family: 'Segoe UI', sans-serif;
+    &>* {
+        padding-top: 10%;
+        place-content: center;
+    }
+}
+
+.heading {
+    h1 {
+        font-size: 4em;
+    }
+    h5 {
+        margin-top: 5%;
+        cursor: pointer;
+    }
+    #retake {
+        color: $green;
+    }
+    #exit {
+        color: $red;
+    }
+}
+
+.score {
+    background-color: white;
+    border: 1px solid $light_black;
+    text-align: center;
+    h1 {
+        font-size: 8em;
+    }
+}
+
+#congratz {
+    display: none;
+}
