@@ -59,19 +59,20 @@
             </p>
         </div>
         <div class="options row mx-auto">
-            <div id="op1" class="option col-md-5 correct">a. correct</div>
-            <div id="op2" class="option col-md-5">b. wrong</div>
-            <div id="op3" class="option col-md-5 wrong">c. wrong</div>
-            <div id="op4" class="option col-md-5">d. wrong</div>
+            <div id="op0" class="option col-md-5">a. </div>
+            <div id="op1" class="option col-md-5">b. </div>
+            <div id="op2" class="option col-md-5">c. </div>
+            <div id="op3" class="option col-md-5">d. </div>
         </div>
         <div class="row">
             <p id="error_msg" class="w-100 d-none text-center">Please choose an option!!</p>
         </div>
         <div class="row justify-content-end">
-            <button id="submit" type="submit">Submit</button>
+            <button id="submit" class="submit d-none" type="submit">Submit</button>
+            <button id="next" class="submit" type="submit">Next</button>
         </div>
     </div>
-    <div id="congratz" class="container-fluid">
+    <div id="congratz" class="container-fluid d-none">
         <div class="row w-100">
             <div class="heading col-lg-6 my-auto">
                 <h1>Congratulation</h1>
@@ -89,8 +90,8 @@
 
 
     <!-- jquery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+    <script src="JQuery/jquery.min.js"></script>
     <!-- Custom javascript -->
     <script src="JS/main.js"></script>
 

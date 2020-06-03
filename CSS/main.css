@@ -250,7 +250,7 @@
   color: #CF2929;
 }
 
-#submit {
+.submit {
   width: 10em;
   border: none;
   padding: 1em;
@@ -261,11 +261,11 @@
   margin-bottom: 5%;
 }
 
-#submit:focus {
+.submit:focus {
   outline: 0;
 }
 
-#submit:hover {
+.submit:hover {
   background-color: #575757;
   -webkit-box-shadow: #6d6d6d 1px 2px 3px;
           box-shadow: #6d6d6d 1px 2px 3px;
