@@ -28,12 +28,11 @@ $(document).ready(() => {
             alert('Please enter a Username');
         } else {
             //resetting
-            alert('aa');
             for (let i = 0; i <= 3; i += 1) {
                 //options
                 $('#op' + i).removeClass('selected').removeClass('correct').removeClass('wrong')
             }
-            for (let i = 0; i <= 10; i += 1) {
+            for (let i = 1; i <= 10; i += 1) {
                 //step progress
                 $('#qn' + i).removeClass('active').removeClass('right').removeClass('wrong');
             }
@@ -166,13 +165,11 @@ $(document).ready(() => {
     $('#submit').on('click', check_answer);
     $('#next').on('click', next_question);
     $('#retake').on('click', () => {
+        $('#submit').removeClass('d-none');
+        $('#next').addClass('d-none');
         takeQuiz();
     });
     $('#exit').on('click', () => {
-        $('.log_in').removeClass('d-none');
-        $('#congratz').addClass('d-none');
-        total_marks = 0;
-        username = '';
-        $('.username').val('');
+        location.reload();
     })
 });
