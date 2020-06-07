@@ -28,11 +28,12 @@ $(document).ready(() => {
             alert('Please enter a Username');
         } else {
             //resetting
+            alert('aa');
             for (let i = 0; i <= 3; i += 1) {
                 //options
                 $('#op' + i).removeClass('selected').removeClass('correct').removeClass('wrong')
             }
-            for (let i = 1; i <= 10; i += 1) {
+            for (let i = 0; i <= 10; i += 1) {
                 //step progress
                 $('#qn' + i).removeClass('active').removeClass('right').removeClass('wrong');
             }
