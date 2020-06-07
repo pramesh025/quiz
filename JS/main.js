@@ -9,6 +9,7 @@ $(document).ready(() => {
 
     function ques_randomizer() {
         let y = [];
+        let rand = [];
         $.ajax({
             url: "../JSON/ques_ans.json",
             async: false,
@@ -16,7 +17,14 @@ $(document).ready(() => {
                 y = result.data;
             }
         });
-        return y;
+        let temp = y;
+        for (let i = 0; i < 10; i += 1) {
+            let index = Math.floor(Math.random() * temp.length);
+            console.log(index);
+            rand.push(temp[index]);
+            temp.splice(index, 1);
+        }
+        return rand;
     }
     let datalist = [];
     let Qno;
