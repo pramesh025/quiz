@@ -3,17 +3,20 @@
 -------------------------------------------------------------------------------------------------------*/
 .log_in {
   height: 100vh;
+  max-width: 600px;
   background-color: rgba(16, 122, 58, 0.78);
   color: white;
   padding: 80px;
-  position: relative;
+  margin: 0;
   overflow: hidden;
 }
+
 .log_in h1 {
   font-family: norwester;
   font-size: 7em;
   margin-bottom: 60px;
 }
+
 .log_in .username {
   height: 3em;
   width: 25em;
@@ -21,15 +24,18 @@
   display: block;
   border: 0;
 }
+
 .log_in input[type=text],
 .log_in input[type=password] {
   padding-left: 30px;
   padding-right: 30px;
 }
+
 .log_in input:focus,
 .log_in button:focus {
   outline-width: 0;
 }
+
 .log_in .login_button {
   height: 2.5em;
   width: 10em;
@@ -51,12 +57,15 @@
   background-color: white;
   right: 3em;
   top: -25em;
-  transform: rotate(-11deg);
+  -webkit-transform: rotate(-11deg);
+          transform: rotate(-11deg);
+  overflow: hidden;
 }
 
 .navbar-nav {
   line-height: 40px;
-  transform: rotate(11deg);
+  -webkit-transform: rotate(11deg);
+          transform: rotate(11deg);
   position: relative;
   top: 25em;
 }
@@ -78,31 +87,31 @@
     height: 60px;
     width: auto;
     background-color: white;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
     left: 0;
     right: 0;
   }
-
   #nav_bar {
     padding: 0 !important;
   }
-
   .navbar-nav {
     top: 0;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
-
   .nav-link {
     color: #107A3A !important;
   }
 }
+
 /*-------------------------------------------------------------------------------------------------------
 -                                       login                                                           -
 -------------------------------------------------------------------------------------------------------*/
 .quiz_interface {
-  min-height: 100vh;
+  height: 100vh;
   background-color: #F6F6F6;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .logout {
@@ -115,13 +124,16 @@
   margin-top: 60px;
   overflow: hidden;
   counter-reset: step;
+  padding-left: 0;
 }
+
 .step_progress li {
   list-style-type: none;
   float: left;
   width: 10%;
   position: relative;
 }
+
 .step_progress li:before {
   content: counter(step);
   counter-increment: step;
@@ -138,8 +150,9 @@
   margin: 0 auto 5px auto;
   z-index: 2;
 }
+
 .step_progress li:after {
-  content: "";
+  content: '';
   width: 100%;
   height: 2px;
   background: #707070;
@@ -148,20 +161,24 @@
   top: 1em;
   z-index: 1;
 }
+
 .step_progress li:last-child:after {
   content: none;
 }
+
 .step_progress li.active:before {
   background: #D4C605;
   color: white;
   border: none;
 }
+
 .step_progress li.right:before,
 .step_progress li.right:after {
   background: #107A3A;
   color: white;
   border: none;
 }
+
 .step_progress li.wrong:before,
 .step_progress li.wrong:after {
   background: #CF2929;
@@ -169,17 +186,24 @@
   border: none;
 }
 
+@media only screen and (max-width: 512px) {
+  .step_progress {
+    display: none;
+  }
+}
+
 .question p {
   margin-top: 3em;
   text-align: center;
   font-size: 1.1em;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .options {
   width: 80%;
   margin-top: 3em;
 }
+
 .options .option {
   border-radius: 2em;
   height: 3.5em;
@@ -188,33 +212,46 @@
   margin-bottom: 1em;
   text-transform: capitalize;
   background-color: whitesmoke;
-  box-shadow: #707070 1px 2px 3px;
-  font-family: "Segoe UI", sans-serif;
+  -webkit-box-shadow: #707070 1px 2px 3px;
+          box-shadow: #707070 1px 2px 3px;
+  font-family: 'Segoe UI', sans-serif;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .options .hover {
   background-color: #ececec;
-  box-shadow: #707070 5px 5px 5px;
+  -webkit-box-shadow: #707070 5px 5px 5px;
+          box-shadow: #707070 5px 5px 5px;
 }
+
 .options .correct {
   border: none;
   background-color: #107A3A;
   color: white;
-  box-shadow: black 1px 2px 3px;
+  -webkit-box-shadow: black 1px 2px 3px;
+          box-shadow: black 1px 2px 3px;
 }
+
 .options .wrong {
   border: none;
   background-color: #CF2929;
   color: white;
-  box-shadow: #4f1010 1px 2px 3px;
+  -webkit-box-shadow: #4f1010 1px 2px 3px;
+          box-shadow: #4f1010 1px 2px 3px;
 }
+
 .options .selected {
   border: none;
   background-color: #D4C605;
   color: white;
-  box-shadow: black 1px 2px 3px;
+  -webkit-box-shadow: black 1px 2px 3px;
+          box-shadow: black 1px 2px 3px;
 }
 
 #error_msg {
@@ -232,12 +269,15 @@
   margin-right: 10%;
   margin-bottom: 5%;
 }
+
 .submit:focus {
   outline: 0;
 }
+
 .submit:hover {
   background-color: #575757;
-  box-shadow: #6d6d6d 1px 2px 3px;
+  -webkit-box-shadow: #6d6d6d 1px 2px 3px;
+          box-shadow: #6d6d6d 1px 2px 3px;
 }
 
 /*-------------------------------------------------------------------------------------------------------
@@ -246,8 +286,9 @@
 #congratz {
   min-height: 100vh;
   background-color: #F6F6F6;
-  font-family: "Segoe UI", sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
+
 #congratz > * {
   padding-top: 10%;
   place-content: center;
@@ -256,13 +297,16 @@
 .heading h1 {
   font-size: 4em;
 }
+
 .heading h5 {
   margin-top: 5%;
   cursor: pointer;
 }
+
 .heading #retake {
   color: #107A3A;
 }
+
 .heading #exit {
   color: #CF2929;
 }
@@ -272,8 +316,8 @@
   border: 1px solid #707070;
   text-align: center;
 }
+
 .score h1 {
   font-size: 8em;
 }
-
 /*# sourceMappingURL=main.css.map */

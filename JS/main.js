@@ -20,7 +20,6 @@ $(document).ready(() => {
         let temp = y;
         for (let i = 0; i < 10; i += 1) {
             let index = Math.floor(Math.random() * temp.length);
-            console.log(index);
             rand.push(temp[index]);
             temp.splice(index, 1);
         }
@@ -175,6 +174,7 @@ $(document).ready(() => {
     $('#retake').on('click', () => {
         $('#submit').removeClass('d-none');
         $('#next').addClass('d-none');
+        $('#congratz').addClass('d-none');
         takeQuiz();
     });
     $('#exit').on('click', () => {

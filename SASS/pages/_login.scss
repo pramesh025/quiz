@@ -1,9 +1,10 @@
 .log_in {
     height: 100vh;
+    max-width: 600px;
     background-color: transparentize($color: $green, $amount: 0.22);
     color: white;
     padding: 80px;
-    position: relative;
+    margin: 0;
     overflow: hidden;
     h1 {
         font-family: norwester;
@@ -49,6 +50,7 @@
     right: 3em;
     top: -25em;
     transform: rotate(-11deg);
+    overflow: hidden;
 }
 
 .navbar-nav {

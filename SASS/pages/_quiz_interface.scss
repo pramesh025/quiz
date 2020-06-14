@@ -1,5 +1,7 @@
 .quiz_interface {
-    min-height: 100vh;
+    height: 100vh;
+    // min-width: 667px;
+    // overflow: auto;
     background-color: $light_white;
     font-family: 'Segoe UI', sans-serif;
 }
@@ -15,11 +17,13 @@
     margin-top: 60px;
     overflow: hidden;
     counter-reset: step;
+    padding-left: 0;
     li {
         list-style-type: none;
         float: left;
         width: 10%;
         position: relative;
+        // left: -5%;
     }
     li:before {
         content: counter(step);
@@ -66,6 +70,12 @@
         background: $red;
         color: white;
         border: none;
+    }
+}
+
+@media only screen and (max-width:512px) {
+    .step_progress {
+        display: none;
     }
 }
 
