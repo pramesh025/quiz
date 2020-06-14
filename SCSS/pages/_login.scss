@@ -69,7 +69,7 @@
     margin-right: auto;
 }
 
-@media only screen and (max-width:1080px) {
+@media only screen and (max-width:1217px) {
     .side_info {
         top: 0;
         height: 60px;
@@ -88,6 +88,24 @@
     }
     .nav-link {
         color: $green !important;
+    }
+}
+
+@media only screen and (max-width:571px) {
+    .log_in {
+        h1 {
+            font-size: 25vw;
+            margin-left: -20px;
+        }
+        .username {
+            margin-left: -20px;
+            width: 75vw;
+        }
+        .login_button {
+            height: 2.5em;
+            width: 10em;
+            margin-left: 25vw;
+        }
     }
 }
 
