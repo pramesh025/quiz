@@ -9,7 +9,6 @@ $(document).ready(() => {
 
     function ques_randomizer() {
         let y = [];
-        let rand = [];
         $.ajax({
             url: "../JSON/ques_ans.json",
             async: false,
